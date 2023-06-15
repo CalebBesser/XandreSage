@@ -14,6 +14,7 @@ import { HydeandSeekComponent } from './hydeand-seek/hydeand-seek.component';
 import { TheHouseComponent } from './the-house/the-house.component';
 import { OurSpaceComponent } from './our-space/our-space.component';
 import { BooksPageComponent } from './books-page/books-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BooksPageComponent } from './books-page/books-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,52 +11,39 @@ html{
 }
 body{
     display:grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: .2fr .3fr .2fr 1fr;
     grid-template-columns: 1fr;
     background:linear-gradient(140deg, #57D7DA,#947CD1, #BE42C1, #DF2B9E, #F54D71, #FB7061, #FEED4E);
     width:100%;
     height: 5000px;
     background-size:auto;
     & .creds{
-        height: 50%;
+        display:grid;
         grid-area: 1 / 1 / 2 / 2;
-        justify-self: center;
-        align-self: center;
-        width: 80%;
-        padding-left:6rem;
-        & .p1{
-            font-size: 6em;
-            margin-bottom: 2rem;
+        text-align: center;
+        & .cred1{
+            font-size:calc(100% + 10vw);
+            margin-top:auto;
         }
-        & .p2 {
-            font-size: 2em;
-            margin-bottom: 1rem;
+        & .cred2{
+            font-size:calc(100% + 3vw);
         }
-        & .p3 {
-            font-size: 1.6em;
-            word-wrap: break-word;
-        }
-    }
-    & .copyright{
-        grid-row: 6 / span 1;
-        margin-top:auto;
-        margin-left: 1rem; margin-bottom: 1rem;
-        font-size:larger;
     }
     & .bio{
         display:grid;
-        grid-template-columns: minmax(50%, 1fr) minmax(20%, 1fr);
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
         grid-row: 2 / span 1;
         background: black;
-        padding: 4rem;
+        padding: 2em 4em 0 4em;
+        text-align: center;
         & p{
             grid-area: 1 / 1 / 2 / 2;
             font-size:larger;
         }
         & img{
             border-radius: 500px;
-            grid-area: 1 / 2 / 2 / 3;
+            grid-area: 2 / 1 / 3 / 2;
             max-height: 80%;
             max-width: 80%;
             justify-self: center;
@@ -65,7 +52,8 @@ body{
     }
     & .works {
         display:grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
         & .poem {
             align-self:center;
             grid-area: 1 / 1 / 2 / 2;
@@ -78,75 +66,195 @@ body{
             }
         }
         & p {
-            grid-area: 1 / 2 / 2 / 3;
+            grid-area: 2 / 1 / 3 / 2;
             align-self: center;
             text-align: center;
             font-size: larger;
         }
     }
-   
+    & .content{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        grid-gap: 1em;
+        margin-top: 1em;
+        & .currently{
+            display:flex;
+            grid-area: 1 / 1 / 2 / 2;
+            justify-content: center;
+        }
+        & .update{
+            display:flex;
+            grid-area: 2 / 1 / 3 / 2;
+            justify-content: center;
+        }
+        & .insta{
+            position: relative;
+            display:flex;
+            grid-area: 3 / 1 / 4 / 2;
+            justify-content: center;
+            justify-self: center;
+            background-color: #e2e2e2;
+            border: 7px solid #8413F5;
+            border-radius: 5%;
+            height: 450px;
+            width: 300px;
+            overflow:hidden;
+        
+        }
+    }
+    & .copyright{
+        grid-row: 6 / span 1;
+        margin-top:auto;
+        margin-left: 1rem; margin-bottom: 1rem;
+        font-size:larger;
+    }
 }
-
-@media screen and (max-width:824px){
+.gr_custom_container_1686780423 {
+    /* customize your Goodreads widget container here*/
+    border: 7px solid gray;
+    border-radius:10px;
+    padding: 10px 5px 10px 5px;
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 300px;
+    height: 450px;
+    text-decoration: none;
+}
+.gr_custom_header_1686780423 {
+    /* customize your Goodreads header here*/
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 1fr;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 150%;
+    text-decoration: none;
+}
+.gr_custom_each_container_1686780423 {
+    /* customize each individual book container here */
+    height: 1fr;
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+    text-decoration: none;
+}
+.gr_custom_book_container_1686780423 {
+    /* customize your book covers here */
+    overflow: hidden;
+    height: 60px;
+    float: right;
+    margin-left: 4px;
+    width: 39px;
+    text-decoration: none;
+}
+.gr_custom_author_1686780423 {
+    /* customize your author names here */
+    font-size: 10px;
+}
+.gr_custom_tags_1686780423 {
+    /* customize your tags here */
+    font-size: 10px;
+    color: gray;
+}
+.gr_custom_rating_1686780423 {
+    /* customize your rating stars here */
+    float: right;
+}
+#customize-list{
+    float:left;
+    margin-left:20px;
+    list-style:none;
+}
+#gr_updates_widget{
+    float:left;
+    border-radius: 5px;
+    background-color:#fff;
+    border:solid #683205 7px;
+    -webkit-box-shadow: 0px 0px 4px 1px #595959,
+    inset 0px 0px 0px 1px #7D730B;
+    -moz-box-shadow: 0px 0px 4px 1px #595959,
+    inset 0px 0px 0px 1px #7D730B;
+    box-shadow: 0px 0px 4px 1px #595959,
+    inset 0px 0px 0px 1px #7D730B;
+    padding:15px 0 0px 15px;
+    width:300px;
+    height:450px;
+}
+#gr_footer{
+    margin-bottom:0px;
+    height:30px;
+}
+#gr_updates_widget p{
+    padding:0px;
+    margin:0;
+    font-size:14px;
+}
+#gr_footer img{
+    width:100px;
+    float:left;
+}
+@media screen and (min-width:824px){
     body{
         & .creds{
-            padding:0;
-            width: 50%;
-            & p{
-                text-align: center;
+            & .cred1{
             }
-            & .p1{
-                font-size: 3.5em;
-                margin-bottom: 1rem;
-            }
-            & .p2{
-                font-size: 2em;
-                margin-bottom: 1rem;
-            }
-            & .p3{
-                font-size: 1.2em;
+            & .cred2{
             }
         }
         & .bio{
-            grid-template-columns: minmax(50%, 1fr);
-            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content;
             & p{
                 grid-area: 1 / 1 / 2 / 2;
-                justify-content: center;
-                text-align: center;
             }
             & img{
-                border-radius: 500px;
-                grid-area: 2 / 1 / 3 / 2;
-                max-width: 60%;
-                justify-self: center;
-                align-self: center;
+                grid-area: 1 / 2 / 2 / 3;
             }
         }
         & .works {
-            display:block;
-            grid-row: 3 / span 1;
-            text-align: center;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content;
+            & .poem {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            & p {
+                grid-area: 1 / 2 / 2 / 3;
+            }
         }
-        
+        & .content{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content min-content;
+            & .currently{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            & .update{
+                grid-area: 1 / 2 / 2 / 3;
+            }
+            & .insta{
+                grid-area: 2 / 1 / 3 / 3;
+            }
+        }
     }
 
 }
-@media screen and (max-width:372px){
+@media screen and (min-width:1024px){
     body{
         & .creds{
-            padding:0;
-            width: 50%;
-            & .p1{
-                font-size: 3em;
-                margin-bottom: 1rem;
+        }
+        & .content{
+            grid-template-columns: 1fr 1fr 1fr;
+            & .currently{
+                grid-area: 1 / 1 / 2 / 2;
             }
-            & .p2 { 
-                font-size: 1.7em;
-                margin-bottom: 1rem;
+            & .update{
+                grid-area: 1 / 2 / 2 / 3;
             }
-            & .p3 {
-                font-size: 1em;
+            & .insta{
+                grid-area: 1 / 3 / 2 / 4;
             }
         }
     }

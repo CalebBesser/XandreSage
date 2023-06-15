@@ -17,6 +17,12 @@ body {
   height: 100%;
 }
 
+.fa-insta-grad {
+  background: -webkit-linear-gradient(top left, #8413F5, #F2069C, #FE6922, #F8BB00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

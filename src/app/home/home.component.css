@@ -13,7 +13,7 @@ html {
 
 body {
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: 0.2fr 0.3fr 0.2fr 1fr;
   grid-template-columns: 1fr;
   background: linear-gradient(140deg, #57D7DA, #947CD1, #BE42C1, #DF2B9E, #F54D71, #FB7061, #FEED4E);
   width: 100%;
@@ -21,39 +21,25 @@ body {
   background-size: auto;
 }
 body .creds {
-  height: 50%;
+  display: grid;
   grid-area: 1/1/2/2;
-  justify-self: center;
-  align-self: center;
-  width: 80%;
-  padding-left: 6rem;
+  text-align: center;
 }
-body .creds .p1 {
-  font-size: 6em;
-  margin-bottom: 2rem;
-}
-body .creds .p2 {
-  font-size: 2em;
-  margin-bottom: 1rem;
-}
-body .creds .p3 {
-  font-size: 1.6em;
-  word-wrap: break-word;
-}
-body .copyright {
-  grid-row: 6/span 1;
+body .creds .cred1 {
+  font-size: calc(100% + 10vw);
   margin-top: auto;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  font-size: larger;
+}
+body .creds .cred2 {
+  font-size: calc(100% + 3vw);
 }
 body .bio {
   display: grid;
-  grid-template-columns: minmax(50%, 1fr) minmax(20%, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
   grid-row: 2/span 1;
   background: black;
-  padding: 4rem;
+  padding: 2em 4em 0 4em;
+  text-align: center;
 }
 body .bio p {
   grid-area: 1/1/2/2;
@@ -61,7 +47,7 @@ body .bio p {
 }
 body .bio img {
   border-radius: 500px;
-  grid-area: 1/2/2/3;
+  grid-area: 2/1/3/2;
   max-height: 80%;
   max-width: 80%;
   justify-self: center;
@@ -69,7 +55,8 @@ body .bio img {
 }
 body .works {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
 }
 body .works .poem {
   align-self: center;
@@ -83,67 +70,189 @@ body .works .poem img {
   max-width: calc(100% - 2rem);
 }
 body .works p {
-  grid-area: 1/2/2/3;
+  grid-area: 2/1/3/2;
   align-self: center;
   text-align: center;
   font-size: larger;
 }
+body .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 1em;
+  margin-top: 1em;
+}
+body .content .currently {
+  display: flex;
+  grid-area: 1/1/2/2;
+  justify-content: center;
+}
+body .content .update {
+  display: flex;
+  grid-area: 2/1/3/2;
+  justify-content: center;
+}
+body .content .insta {
+  position: relative;
+  display: flex;
+  grid-area: 3/1/4/2;
+  justify-content: center;
+  justify-self: center;
+  background-color: #e2e2e2;
+  border: 7px solid #8413F5;
+  border-radius: 5%;
+  height: 450px;
+  width: 300px;
+  overflow: hidden;
+}
+body .copyright {
+  grid-row: 6/span 1;
+  margin-top: auto;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: larger;
+}
 
-@media screen and (max-width: 824px) {
-  body .creds {
-    padding: 0;
-    width: 50%;
-  }
-  body .creds p {
-    text-align: center;
-  }
-  body .creds .p1 {
-    font-size: 3.5em;
-    margin-bottom: 1rem;
-  }
-  body .creds .p2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
-  }
-  body .creds .p3 {
-    font-size: 1.2em;
-  }
+.gr_custom_container_1686780423 {
+  /* customize your Goodreads widget container here*/
+  border: 7px solid gray;
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 300px;
+  height: 450px;
+  text-decoration: none;
+}
+
+.gr_custom_header_1686780423 {
+  /* customize your Goodreads header here*/
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 1fr;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 150%;
+  text-decoration: none;
+}
+
+.gr_custom_each_container_1686780423 {
+  /* customize each individual book container here */
+  height: 1fr;
+  width: 100%;
+  clear: both;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #aaa;
+  text-decoration: none;
+}
+
+.gr_custom_book_container_1686780423 {
+  /* customize your book covers here */
+  overflow: hidden;
+  height: 60px;
+  float: right;
+  margin-left: 4px;
+  width: 39px;
+  text-decoration: none;
+}
+
+.gr_custom_author_1686780423 {
+  /* customize your author names here */
+  font-size: 10px;
+}
+
+.gr_custom_tags_1686780423 {
+  /* customize your tags here */
+  font-size: 10px;
+  color: gray;
+}
+
+.gr_custom_rating_1686780423 {
+  /* customize your rating stars here */
+  float: right;
+}
+
+#customize-list {
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+}
+
+#gr_updates_widget {
+  float: left;
+  border-radius: 5px;
+  background-color: #fff;
+  border: solid #683205 7px;
+  box-shadow: 0px 0px 4px 1px #595959, inset 0px 0px 0px 1px #7D730B;
+  padding: 15px 0 0px 15px;
+  width: 300px;
+  height: 450px;
+}
+
+#gr_footer {
+  margin-bottom: 0px;
+  height: 30px;
+}
+
+#gr_updates_widget p {
+  padding: 0px;
+  margin: 0;
+  font-size: 14px;
+}
+
+#gr_footer img {
+  width: 100px;
+  float: left;
+}
+
+@media screen and (min-width: 824px) {
   body .bio {
-    grid-template-columns: minmax(50%, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
   }
   body .bio p {
     grid-area: 1/1/2/2;
-    justify-content: center;
-    text-align: center;
   }
   body .bio img {
-    border-radius: 500px;
-    grid-area: 2/1/3/2;
-    max-width: 60%;
-    justify-self: center;
-    align-self: center;
+    grid-area: 1/2/2/3;
   }
   body .works {
-    display: block;
-    grid-row: 3/span 1;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+  }
+  body .works .poem {
+    grid-area: 1/1/2/2;
+  }
+  body .works p {
+    grid-area: 1/2/2/3;
+  }
+  body .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+  }
+  body .content .currently {
+    grid-area: 1/1/2/2;
+  }
+  body .content .update {
+    grid-area: 1/2/2/3;
+  }
+  body .content .insta {
+    grid-area: 2/1/3/3;
   }
 }
-@media screen and (max-width: 372px) {
-  body .creds {
-    padding: 0;
-    width: 50%;
+@media screen and (min-width: 1024px) {
+  body .content {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  body .creds .p1 {
-    font-size: 3em;
-    margin-bottom: 1rem;
+  body .content .currently {
+    grid-area: 1/1/2/2;
   }
-  body .creds .p2 {
-    font-size: 1.7em;
-    margin-bottom: 1rem;
+  body .content .update {
+    grid-area: 1/2/2/3;
   }
-  body .creds .p3 {
-    font-size: 1em;
+  body .content .insta {
+    grid-area: 1/3/2/4;
   }
 }/*# sourceMappingURL=home.component.css.map */
