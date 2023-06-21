@@ -1,22 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend");
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 html {
-  position: absolute;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: linear-gradient(140deg, #F59133, #DE4B9C);
-}
-
-.contacts {
+  font-family: "Lexend", sans-serif;
   color: white;
-  background-color: blue;
-  height: 10em;
-  width: 10em;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(140deg, #F59133, #DE4B9C);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .contacts {
+  position: relative;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  background-color: rgb(41, 41, 41);
+  border-radius: 0.5em;
+  height: 30em;
+  width: calc(80% + 1vw);
   margin: 0 auto;
+  justify-content: center;
+}
+body .contacts p {
+  font-size: calc(100% + 1vw);
+}
+body .contacts .line {
+  width: calc(80% + 1vw);
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+body .contacts .email {
+  display: flex;
+  margin-left: 0.3rem;
+  gap: 0.5em;
+}
+body .contacts .email a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: calc(80% + 1vw);
+}
+body .contacts .insta {
+  margin-top: 1em;
+  margin-left: 0.3rem;
+  display: flex;
+  gap: 1em;
+}
+body .contacts .insta .fa-insta-grad {
+  background: -webkit-linear-gradient(top left, #8413F5, #F2069C, #FE6922, #F8BB00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5em;
+}
+body .contacts .facebook {
+  margin-top: 1em;
+  margin-left: 0.3rem;
+  display: flex;
+  gap: 1em;
+}
+body .contacts .facebook .fa-facebook {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 350px) {
+  body .contacts .email {
+    justify-content: center;
+  }
+  body .contacts .insta {
+    justify-content: center;
+  }
+  body .contacts .facebook {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=contacts.component.css.map */

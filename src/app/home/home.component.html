@@ -88,34 +88,53 @@
             
             </div>
             <div class="insta">
-                <p style="position: absolute; top:3.5em; color:black;">Instgram</p>   
-                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/3bd2bee9c8d55921aff27af5864f5563.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>            
             </div>       
         </div>
-        <section aria-label="poems">
-            <div class="carousel">
-                <button class="carousel-button prev">&#8656;</button>
-                <button class="carousel-button next">&#8658;</button>
-                <ul>
-                    <li class="slide" data-active>
-                        <img src="https://imgur.com/VsqZPer.png" alt="HelloLove">
-                    </li>
-                    <li class="slide">
-                        <img src="https://imgur.com/CCDoof5.png" alt="StayGold">
-                    </li>
-                    <li class="slide">
-                        <img src="https://imgur.com/g2n7pQj.png" alt="Fear">
-                    </li>
-                    <li class="slide">
-                        <img src="https://imgur.com/MuyEmHB.png" alt="Love">
-                    </li>
-                    <li class="slide">
-                        <img src="https://imgur.com/NEpSVZs.png" alt="Watch">
-                    </li>
-                    
-                </ul>
+        <div class="poems">
+            <div class="container">
+                <div class="slides fade first">
+                    <img src="https://imgur.com/VsqZPer.png" alt="HelloLove" style="width:100%; height:100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="https://imgur.com/CCDoof5.png" alt="StayGold" style="width:100%; height:100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="https://imgur.com/g2n7pQj.png" alt="Fear" style="width:100%; height:100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="https://imgur.com/MuyEmHB.png" alt="Love" style="width:100%; height:100%;">
+                </div>
+                <div class="slides fade">
+                    <img src="https://imgur.com/NEpSVZs.png" alt="Watch" style="width:100%; height:100%;">
+                </div>
+                <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+                <a class="next" (click)="plusSlides(1)">&#10095;</a>
+            </div> 
+            <div style="text-align:center;">
+                <span class="dot" (click)="currentSlide(1)"></span>
+                <span class="dot" (click)="currentSlide(2)"></span>
+                <span class="dot" (click)="currentSlide(3)"></span>
+                <span class="dot" (click)="currentSlide(4)"></span>
+                <span class="dot" (click)="currentSlide(5)"></span>
             </div>
-        </section>
+        </div>
+        <div class="poemsbig">
+            <div class="one">
+                <img src="https://imgur.com/VsqZPer.png" alt="HelloLove" style="width:100%; height:100%;">
+            </div>
+            <div class="two">
+                <img src="https://imgur.com/CCDoof5.png" alt="StayGold" style="width:100%; height:100%;">
+            </div>
+            <div class="three">
+                <img src="https://imgur.com/g2n7pQj.png" alt="Fear" style="width:100%; height:100%;">
+            </div>
+            <div class="four">
+                <img src="https://imgur.com/MuyEmHB.png" alt="Love" style="width:100%; height:100%;">
+            </div>
+            <div class="five">
+                <img src="https://imgur.com/NEpSVZs.png" alt="Watch" style="width:100%; height:100%;">
+            </div>
+        </div>
         <p class="copyright" id="copyright">2023 Copyright © Xandré Sage | All Rights Reserved</p>
     </body>
 
